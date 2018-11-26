@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Övningar</title>
+    <link rel="stylesheet" href="style.o.css">
+</head>
+
+<body>
+    <h1>Övning 1</h1>
+    <form action="">
+        <table class="o1">
+            <tr>
+                <th class="heading">Name</th>
+                <th class="heading">Value</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>
+                    <input type="radio" name="gender" id="" value="female">Female<br>
+                    <input type="radio" name="gender" id="" value="male">Male
+                </td>
+            </tr>
+            <tr>
+                <td>Eye color</td>
+                <td>
+                    <select name="eyecolor" id="">
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Gray">Gray</option>
+                        <option value="Brown">Brown</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Check all that apply</td>
+                <td><input type="checkbox" name="6feet" id="">Over 6 feet tall<br>
+                    <input type="checkbox" name="200pounds" id="">Over 200 pounds</td>
+            </tr>
+            <tr>
+                <td colspan="2">Describe your athletic ability:</td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="athleticAbility" id="" cols="41" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <th colspan="2"> <input type="submit" value="Enter my information"></th>
+            </tr>
+        </table>
+    </form>
+
+
+    <h2>Övning 2</h2>
+    <h3>Contact us</h3>
+    <form action="" method="post">
+        <input type="text" name="name" id="" placeholder="Name" class="newInput"><br>
+        <input type="email" name="email" id="" placeholder="Email" class="newInput"><br>
+        <input type="date" name="birthday" id="" placeholder="Birthday" onfocus="(this.type='date')" class="newInput">
+        <p>Do you prefer coffee or tea?<br>
+            <input type="radio" name="CorT" id="" value="coffee">Coffee<br>
+            <input type="radio" name="CorT" id="" value="tea">Tea<br>
+        </p>
+        <p>Choose a flavour
+            <select name="flavour" id="">
+                <option value="Chocolate">Chocolate</option>
+                <option value="Vanilla">Vanilla</option>
+                <option value="Banana">Banana</option>
+                <option value="Strawberry">Strawberry</option>
+                <option value="Caramel">Caramel</option>
+            </select>
+        </p>
+        <p>Would you like a free kitten? <br>
+        <input type="checkbox" name="yes" id="">Yes, please!</p>
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Message" class="textInput"></textarea><br>
+        <input type="submit" value="Send!" class="submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML formulär</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>HTML formulär</h1>
+    <h2>Ett standardformulär</h2>
+    <form action="backend.php" method="post">
+        First name: <br>
+        <input type="text" name="firstname"><br>
+        Last name: <br>
+        <input type="text" name="lastname"> <br>
+        <!-- Använd input eller button för att skicka 
+        OBS! Vi måte lägga till type="submit" -->
+        <input type="submit" value="Submit!">
+    </form>
+
+    <h2>Inloggningsformulär</h2>
+    <form action="backend.php" method="POST">
+        <p> Username:<br>
+            <input type="text" name="username" size="20" maxlength="5"><br>
+        </p>
+        <p> Password:<br>
+            <input type="password" name="password" size="20" maxlength="5">
+        </p>
+        <p>
+            <input type="submit" value="Login">
+        </p>
+    </form>
+
+    <h2>Textarea</h2>
+    <form action="backend.php" method="post">
+        <p>What do you think?</p>
+        <textarea name="comments" id="" cols="30" rows="10"></textarea>
+    </form>
+
+    <h2>Radio buttons(alternativknappar)</h2>
+    <form action="backend" method="post">
+        <p>Select your favourite genre:
+        </p>
+        <input type="radio" name="genre" value="rock" checked> Rock
+        <input type="radio" name="genre" value="pop"> Pop
+        <input type="radio" name="genre" value="jazz"> Jazz
+        <p>OBS! Namnet måste vara samma på alla radioknappar men value måste vara olika!</p>
+    </form>
+
+    <h2>Kryssrutor(checkbox)</h2>
+    <form action="backend" method="post">
+        <p>Select your favourite music service(s)</p>
+        <input type="checkbox" name="service" value="itunes"> iTunes
+        <input type="checkbox" name="service" value="syntaxfm"> syntaxFm
+        <input type="checkbox" name="service" value="Spotify"> Spotify
+    </form>
+    <h2>Label</h2>
+    <h3>Input inuti label</h3>
+    <form action="backend" method="POST">
+        <label>Age: <input type="text" name="age"></label>
+        <h3>Input utanför label</h3>
+        <input type="radio" name="gender" value="female" id="fe">
+        <label for="fe">Female</label>
+        <input type="radio" name="gender" value="male" id="ma">
+        <label for="ma">Male</label>
+        <input type="radio" name="gender" value="other" id="ot">
+        <label for="ot">Other</label>
+    </form>
+
+    <br>
+
+    <form action="">
+        <fieldset class="fields">
+            <legend>Contact details</legend>
+            <label>Email<br>
+                <input type="email" name="email" required>
+            </label>
+            <br>
+            <label>Mobile<br>
+                <input type="tel" name="mobile">
+            </label>
+        </fieldset>
+        <input type="submit">
+    </form>
+
+    <h2>Dropdown</h2>
+    <form action="">
+        <p>What device do you listen to music on?</p>
+        <select name="device" id="">
+            <option value="ipod">iPod</option>
+            <option selected value="radio">Radio</option>
+            <option value="computer">Computer</option>
+        </select>
+    </form>
+    <h2>Datumfält</h2>
+    <form action="">
+        <label for="Departure">Departure date</label>
+        <input type="date" name="Departure" id="Departure">
+        <input type="submit" value="submit">
+    </form>
+
+    <h2>Sökfält</h2>
+    <form action="">
+        <input type="search" name="search" placeholder="Search...">
+
+        <input type="submit" name="search">
+        <input type="reset" name="Clear">
+    </form>
+
+    <h2>Ladda upp en fil</h2>
+    <form action="">
+        <input type="file" name="song" value="TEST" id="" accept=".mp3"><br>
+        <input type="submit" name="Upload">
+    </form>
+
+    <h2>Attributet disabled</h2>
+    <form action="" method="post">
+        Email <input type="email">
+        <input type="submit" value="send" disabled>
+    </form>
+
+    <h2>Attributet Required</h2>
+    <form action="" method="POST">
+        Email <input type="mail" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Attributen min och max</h2>
+    <form action="" method="post">
+        Quantity(between 1 and 5)
+        <input type="number" required min="1" max="5">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Datalist</h2>
+    <p>En datalista används för att skapa ett filter.</p>
+    <form action="" method="post">
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Range & Output</h2>
+    <form action="" method="post" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+
+        0<input type="range" name="a" id="" value="0" oninput="a1.value=this.value">100<br>
+
+        <br>0<input type="range" name="b" id="" value="0" oninput="b1.value=this.value">100<br>
+        <output name="a1"></output> + <output name="b1"></output> = <output name="x" for="a b">0</output>
+    </form>
+    <h2>Flera användbara form-kontroller</h2>
+    <form action="">
+        Select a time:
+        <input type="time" name="time">
+        <br>
+        <input type="week" name="week" id="">
+        <br>
+        <input type="color" name="color" id="">
+        <br>
+        What is your favourite website? <br>
+        <input type="url" name="website" id="" required>
+        <br>
+        <!-- hidden fields -->
+        <input type="hidden" name="customer_id" value="12345">
+        <input type="submit" value="submit">
+    </form>
+    <audio src="audio/test-audio.ogg" controls autoplay>
+        <p>This browser does not support our audio format.</p>
+        </audio>
+    <video src="https://www.youtube.com/watch?v=-wzLcPluAn8&list=RD-wzLcPluAn8&start_radio=1" width="400" height="300">
+</video>
+</body>
+
+</html>

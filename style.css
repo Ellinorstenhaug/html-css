@@ -1,5 +1,19 @@
 .lektion{
-    color:teal;
+    color:teal; { 
+    {
+        {
+            
+        }
+    }
+    }
+}
+
+th {
+    text-align:left;
+    font-size: 2em;
+}
+table, th, td, tr {
+    border: 1px solid lightgray;
 }
 
 a {
@@ -8,4 +22,9 @@ a {
 }
 a:visited {
     color: darkslategray;
+}
+.wrapper {
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
 }
